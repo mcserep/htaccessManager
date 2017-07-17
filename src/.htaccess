@@ -1,0 +1,13 @@
+# Enfore authentication for htaccess manager.
+<Files example.php>
+  # Require SSL connection.
+  #SSLRequireSSL
+  
+  # Auth configuration.
+  AuthType Basic
+  AuthName "Example repository"
+  AuthUserFile /path/to/passwd/folder/example
+
+  # Limit permissions to list of valid users.
+  require valid-user
+</Files>
